@@ -3,6 +3,11 @@ describe('Rock paper scissors game', () => {
     beforeEach(() => {
       cy.visit('/')
     })
+
+    it('user can start game', () => {
+      cy.get('button').click()
+      cy.get('#srt-btn').should('contain', 'Get started')
+    })
   
     it('user can choose rock', () => {
       cy.get('#rock-btn').click()

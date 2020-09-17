@@ -1,11 +1,12 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 
-const HeaderExamplePage = () => (
-  <div>
+const HeaderExamplePage = () => {
+    return (
+    <div>
     <Header as='h1'>Welcome to the Rock Scissors Paper's game!</Header>
-
-  </div>
-)
+    <button id='srt-btn' >Get started</button>
+    </div>
+)}
 
 export default HeaderExamplePage

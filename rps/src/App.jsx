@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-       < Header />
+       < Header>
         
         <p>
           Edit <code>hand rock outline</code> and save to reload.
@@ -20,7 +20,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </Header>
+     
     </div>
   );
 }

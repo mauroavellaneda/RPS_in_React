@@ -1,29 +1,31 @@
+import { render } from 'enzyme';
 import React from 'react';
-import Header from './components/header/header.jsx'
 
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-       < Header>
-        
-        <p>
-          Edit <code>hand rock outline</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </Header>
-     
-    </div>
-  );
+const selector = ['rock','paper','scissor'];
+
+class App extends Component {
+  state = {
+    playerOne: selector[0],
+    playerTwo: selector[0],
+    winner: ''
+
+
+  }
+  render() {
+    return (
+      <div>
+        <h1>Rock,Paper, Scissor</h1>
+        <Player/>
+        <div><button id='rock-btn'></button></div>
+      </div>
+      
+    )
+  }
+  
+  
+  
 }
 
 export default App;

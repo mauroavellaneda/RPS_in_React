@@ -1,31 +1,64 @@
 import { render } from 'enzyme';
-import React from 'react';
+import React, { Component } from "react";
+import Scoreboard from './components/Scoreboard';
 
 
 
-const selector = ['rock','paper','scissor'];
+
+
 
 class App extends Component {
   state = {
-    playerOne: selector[0],
-    playerTwo: selector[0],
+    player: null,
+    computer: null,
+    playerScore: 0,
+    computerScore: 0,
     winner: ''
 
-
   }
+
+
+  theWinnerIs = () => {
+
+    const { player, computer } = this.state;
+
+    if (player === computer) {
+      return "Even steven, Try again!";
+
+    } else if (
+      (player === "rock" && computer === "scissors") ||
+      (player === "scissors" && computer === "paper") ||
+      (player === "paper" && computer === "rock")
+    ) {
+      this.setState({ playerScore: this.state.playerScore + 1 })
+      return "You Won!";
+    } else {
+      this.setState({ computerScore: this.state.computerScore + 1 })
+      return "You loose!";
+    }
+
+  };
+
+    
+
+
   render() {
     return (
       <div>
         <h1>Rock,Paper, Scissor</h1>
-        <Player/>
-        <div><button id='rock-btn'></button></div>
+        
+        <div><button id='rock-btn'>rock</button></div>
+        <div><button id='ppr-btn'>Paper</button></div>
+        <div><button id='scr-btn'>Scissor</button></div>
+        <Scoreboard playerScore={this.state.playerScore} computerScore={this.state.computerScore}/>
+        <button type='button'>Play</button>
       </div>
-      
+
     )
   }
-  
-  
-  
+
+
+
 }
 
 export default App;

@@ -4,24 +4,28 @@ describe('Rock paper scissors game', () => {
       cy.visit('/')
     })
 
-    it('user can start game', () => {
+    it('Player can start game', () => {
       cy.get('button').click()
       cy.get('#srt-btn').should('contain', 'Get started')
     })
   
-    it('user can choose rock', () => {
+    it('Player can choose rock', () => {
       cy.get('button').click()
       cy.get('#rock-btn').should('contain', 'rock')
     })
   
-    it('user can choose paper', () => {
+    it('Player can choose paper', () => {
       cy.get('button').click()
       cy.get('ppr-btn').should('contain', 'paper')
     })
   
-    it('user can choose scissors', () => {
+    it('Player can choose scissors', () => {
       cy.get('button').click()
-      cy.get('#scr-btn').should('contain', 'scissors')
+      cy.get('#scr-btn').should('contain', 'scissor')
+    })
+    it('Player can click on play button', () => {
+      cy.get('button').click()
+      cy.get('#play').should('contain', 'Play')
     })
     
     

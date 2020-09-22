@@ -1,9 +1,14 @@
-import React, { Component } from 'react'
-import { Header, Grid } from 'semantic-ui-react'
+import React from 'react'
+import { Header, } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 const Scoreboard = ({ playerScore, computerScore }) => {
     return (
         <div class='scoreboard'>
+            <Button id='rock-btn'>rock</Button>
+            <Button id='ppr-btn'>paper</Button>
+            <Button id='scr-btn'>scissor</Button>
+            <Button id='play'>Play</Button>
             
 
                 <Header>

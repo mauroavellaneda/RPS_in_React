@@ -1,26 +1,24 @@
-import { render } from 'enzyme';
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import Header from './components/Header'
 import Scoreboard from './components/Scoreboard';
 
-
-
-
-
-
 class App extends Component {
+
   state = {
     player: null,
     computer: null,
     playerScore: 0,
     computerScore: 0,
-    winner: ''
+    winner: '',
 
   }
 
 
   theWinnerIs = () => {
 
-    const { player, computer } = this.state;
+    const election = ["rock", "paper", "scissors"];
+    const computer = election[Math.floor(Math.random() * election.length)];
+    const player = '';
 
     if (player === computer) {
       return "Even steven, Try again!";
@@ -39,26 +37,25 @@ class App extends Component {
 
   };
 
-    
-
-
-  render() {
+  render () {
     return (
       <div>
-        <h1>Rock,Paper, Scissor</h1>
-        
-        <div><button id='rock-btn'>rock</button></div>
-        <div><button id='ppr-btn'>Paper</button></div>
-        <div><button id='scr-btn'>Scissor</button></div>
-        <Scoreboard playerScore={this.state.playerScore} computerScore={this.state.computerScore}/>
-        <button type='button'>Play</button>
+      <Header />
+      
+      <Scoreboard />
       </div>
-
     )
   }
 
+};
+
+  
+    
+  
 
 
-}
+
+
+
 
 export default App;

@@ -4,7 +4,7 @@ describe('Rock paper scissors game', () => {
       cy.visit('/')
     })
     it('Player can see a welcome message', () => {
-      cy.get('#title').should('contain', 'Welcome to the Rock Scissor Paper game!')
+      cy.get('#title').should('contain', 'Welcome to the Rock Paper Scissor game!')
     })
 
     it('Player can start game', () => {
@@ -31,8 +31,4 @@ describe('Rock paper scissors game', () => {
       cy.get('button').should('contain', 'Play')
     })
     
-    
-    it('Player gets final score after the game ends', () => {
-      cy.get('#msg').should('be.visible')
-    })
   })

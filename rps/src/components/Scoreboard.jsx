@@ -9,7 +9,6 @@ const Scoreboard = ({ playerScore, computerScore }) => {
             <Button id='rock-btn'>rock</Button>
             <Button id='ppr-btn'>paper</Button>
             <Button id='scr-btn'>scissor</Button>
-            <Button id='play'>Play</Button>
             
 
                 <Header>

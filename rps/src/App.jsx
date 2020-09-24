@@ -39,7 +39,7 @@ class App extends Component {
           <Header onClickHandler={() => this.setState({ Header: false })} />
         ) : (
           <Scoreboard
-            onClickHandler={() => this.setState({ welcomePage: true })}
+            onClickHandler={() => this.setState({ Header: true })}
           />
         )}
       </div>

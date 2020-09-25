@@ -9,17 +9,21 @@ describe("Rock paper scissors game", () => {
   });
 
   it("Player can choose rock", () => {
-    cy.get("#rock-btn").click();
-    cy.get("button").should("contain", "rock");
+    cy.get("#rock").click();
+    cy.get("button").should("contain", "Rock");
   });
 
   it("Player can choose paper", () => {
-    cy.get("#ppr-btn").click();
-    cy.get("button").should("contain", "paper");
+    cy.get("#paper").click();
+    cy.get("button").should("contain", "Paper");
   });
 
   it("Player can choose scissor", () => {
-    cy.get("#scr-btn").click();
-    cy.get("button").should("contain", "scissor");
+    cy.get("#scissor").click();
+    cy.get("button").should("contain", "Scissor");
+  });
+  it("Player can reset score board", () => {
+    cy.get("#rst-btn").click();
+    cy.get("button").should("contain", "Reset Score");
   });
 });

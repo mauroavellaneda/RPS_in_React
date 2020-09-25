@@ -1,3 +1,17 @@
+# User Story
+As a player
+In order to play rock, paper, scissor's game
+I need to have a platform with the options and the logic.
+
+
+
+
+Special thanks to Emiliano Mainero for helping with doubts and issues that I had during the challenge.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

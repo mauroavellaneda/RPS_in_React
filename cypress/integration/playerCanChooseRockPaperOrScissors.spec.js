@@ -22,6 +22,12 @@ describe("Rock paper scissors game", () => {
     cy.get("#scissor").click();
     cy.get("button").should("contain", "Scissor");
   });
+  it("displays player scores", () => {
+    cy.get("#player-score").contains("Player:");
+  });
+  it("displays computer scores", () => {
+    cy.get("#computer-score").contains("Computer:");
+  });
   it("Player can reset score board", () => {
     cy.get("#rst-btn").click();
     cy.get("button").should("contain", "Reset Score");

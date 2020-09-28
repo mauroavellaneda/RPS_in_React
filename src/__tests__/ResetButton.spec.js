@@ -8,8 +8,8 @@ describe('<ResetButton />', () => {
     const wrapper = mount(<ResetButton />);
     it('resets the score board on click', () => {
         wrapper.find('#rst-btn').simulate('click');
-        expect(wrapper.state().playerScore).toEqual(0);
-        expect(wrapper.state().computerScore).toEqual(0);
+        expect(wrapper.state().playerScore).toEqual (0);
+        expect(wrapper.state().computerScore).toEqual (0);
 
 
 

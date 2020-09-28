@@ -9,7 +9,6 @@ class App extends Component {
   state = {
     playerMoves: [],
     computerMoves: [],
-    result: [],
     playerWins: 0,
     computerWins: 0,
     Header: true,
@@ -43,12 +42,8 @@ class App extends Component {
       return "You loose";
     }
   };
-  resetScore = () => {
-    this.setState({
-      playerWins: 0,
-      computerWins: 0,
-    });
-  };
+
+  
 
   render() {
     return (
@@ -57,24 +52,24 @@ class App extends Component {
           <Header onClickHandler={() => this.setState({ Header: false })} />
         ) : (
           <div class="buttons">
-            <Button id="rock" onClick={this.timeToPlay.bind(this)}>
+            <Button id="rock" onClick={this.timeToPlay}>
               Rock
             </Button>
-            <Button id="scissor" onClick={this.timeToPlay.bind(this)}>
+            <Button id="scissor" onClick={this.timeToPlay}>
               Scissor
             </Button>
-            <Button id="paper" onClick={this.timeToPlay.bind(this)}>
+            <Button id="paper" onClick={this.timeToPlay}>
               Paper
             </Button>
 
             <p>
-              <strong>Your time to move!</strong> <br /> <br />
+              <strong>Your time to move!</strong> <br />
             </p>
 
             <h2 id="winner">{this.state.winner}</h2>
-            <p id="score">Player: {this.state.playerWins} </p>
-            <p id="score"> Computer: {this.state.computerWins}</p>
-            <ResetButton onClick={() => this.resetScore} />
+            <p id="player-score">Player: {this.state.playerWins} </p>
+            <p id="computer-score"> Computer: {this.state.computerWins}</p>
+            <ResetButton />
           </div>
         )}
       </div>

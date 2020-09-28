@@ -1,17 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import { Button } from "semantic-ui-react";
 
-const ResetButton = props => {
-  return (
-    <div>
-      <Button
-        
-        id="rst-btn"
-        onClick={props.onClick()}
-      >
-        Reset Score
-      </Button>
-    </div>
-  );
-};
+class ResetButton extends Component {
+  state = {
+    playerWins: [],
+    computerWins: [],
+  };
+
+  resetScore = () => {
+    this.setState({
+      playerWins: 0,
+      computerWins: 0,
+    });
+  };
+  render() {
+    return (
+      <div>
+        <Button id="rst-btn" onClick={() => this.resetScore()}>
+          Reset Score
+        </Button>
+      </div>
+    );
+  }
+}
 export default ResetButton;

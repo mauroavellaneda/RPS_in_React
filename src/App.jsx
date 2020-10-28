@@ -43,8 +43,6 @@ class App extends Component {
     }
   };
 
-  
-
   render() {
     return (
       <div>
@@ -52,13 +50,13 @@ class App extends Component {
           <Header onClickHandler={() => this.setState({ Header: false })} />
         ) : (
           <div class="buttons">
-            <Button id="rock" onClick={this.timeToPlay}>
+            <Button id="rock" data-cy="rock" onClick={this.timeToPlay}>
               Rock
             </Button>
-            <Button id="scissor" onClick={this.timeToPlay}>
+            <Button id="scissor" data-cy="scissor" onClick={this.timeToPlay}>
               Scissor
             </Button>
-            <Button id="paper" onClick={this.timeToPlay}>
+            <Button id="paper" data-cy="paper" onClick={this.timeToPlay}>
               Paper
             </Button>
 

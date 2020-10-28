@@ -8,6 +8,7 @@ class ResetButton extends Component {
   };
 
   resetScore = () => {
+    debugger;
     this.setState({
       playerWins: 0,
       computerWins: 0,
@@ -16,7 +17,11 @@ class ResetButton extends Component {
   render() {
     return (
       <div>
-        <Button id="rst-btn" onClick={() => this.resetScore()}>
+        <Button
+          id="rst-btn"
+          data-cy="rst-btn"
+          onClick={() => this.resetScore()}
+        >
           Reset Score
         </Button>
       </div>

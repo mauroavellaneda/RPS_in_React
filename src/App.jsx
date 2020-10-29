@@ -43,6 +43,14 @@ class App extends Component {
     }
   };
 
+  resetScore = () => {
+    this.setState({
+      playerWins: 0,
+      computerWins: 0,
+      winner: "Your time to move!"
+    });
+  };
+
   render() {
     return (
       <div>
@@ -64,10 +72,10 @@ class App extends Component {
               <strong>Your time to move!</strong> <br />
             </p>
 
-            <h2 id="winner">{this.state.winner}</h2>
+            <h2 data-cy="score-message">{this.state.winner}</h2>
             <p id="player-score">Player: {this.state.playerWins} </p>
-            <p id="computer-score"> Computer: {this.state.computerWins}</p>
-            <ResetButton />
+            <p data-cy="score-result"> Computer: {this.state.computerWins}</p>
+            <ResetButton onClick={() => this.resetScore} />
           </div>
         )}
       </div>

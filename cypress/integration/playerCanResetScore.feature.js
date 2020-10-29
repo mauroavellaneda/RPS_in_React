@@ -7,11 +7,20 @@ describe("Player can reset the score", () => {
     );
     cy.get("#srt-btn").click();
   });
-  it("after playing 3 games in a row", () => {
+  it("resets score after a finished game", () => {
     cy.get("[data-cy='rock']").click();
     cy.get("[data-cy='paper']").click();
     cy.get("[data-cy='scissor']").click();
     cy.get("[data-cy='rst-btn']").click();
-    cy.get("[data-cy='score-result']").contains("0-0-0");
+    cy.get("[data-cy='score-result']").contains("0");
+  });
+
+  it("resets score message after a finished game", () => {
+    cy.get("[data-cy='rock']").click();
+    cy.get("[data-cy='paper']").click();
+    cy.get("[data-cy='scissor']").click();
+    cy.get("[data-cy='rst-btn']").click();
+    cy.get("[data-cy='score-message']").contains("Your time to move!");
+
   });
 });

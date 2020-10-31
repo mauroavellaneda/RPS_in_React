@@ -9,27 +9,27 @@ describe("Rock paper scissors game", () => {
   });
 
   it("Player can choose rock", () => {
-    cy.get("#rock").click();
-    cy.get("button").should("contain", "Rock");
+    cy.get('[alt="rock"]').click();
+    cy.get("img").should("be.visible");
   });
 
   it("Player can choose paper", () => {
-    cy.get("#paper").click();
-    cy.get("button").should("contain", "Paper");
+    cy.get('[alt="paper"]').click();
+    cy.get("img").should("be.visible");
   });
 
   it("Player can choose scissor", () => {
-    cy.get("#scissor").click();
-    cy.get("button").should("contain", "Scissor");
+    cy.get('[alt="scissor"]').click();
+    cy.get("img").should("be.visible");
   });
   it("displays player scores", () => {
     cy.get("#player-score").contains("Player:");
   });
   it("displays computer scores", () => {
-    cy.get("#computer-score").contains("Computer:");
+    cy.get("[data-cy='computer-score']").contains("Computer:");
   });
   it("Player can reset score board", () => {
-    cy.get("#rst-btn").click();
-    cy.get("button").should("contain", "Reset Score");
+    cy.get("[data-cy='rst-btn']").click();
+    cy.get("button").should("contain", "Reset Scoreboard");
   });
 });

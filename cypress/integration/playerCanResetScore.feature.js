@@ -12,7 +12,7 @@ describe("Player can reset the score", () => {
     cy.get("[data-cy='paper']").click();
     cy.get("[data-cy='scissor']").click();
     cy.get("[data-cy='rst-btn']").click();
-    cy.get("[data-cy='score-result']").contains("0");
+    cy.get("[data-cy='score-message']").contains("0");
   });
 
   it("resets score message after a finished game", () => {

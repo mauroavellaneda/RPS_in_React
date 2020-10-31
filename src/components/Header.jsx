@@ -1,28 +1,32 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import { Button, Header, Icon, Container, Image } from "semantic-ui-react";
 
-const Header = ({ onClickHandler }) => {
+const Title = ({ onClickHandler }) => {
   return (
-    <div>
-      <div id="title" data-cy="title">
-        Welcome to the Rock Paper Scissor game!
-      </div>
-      <Button
-        id="srt-btn"
-        onClick={onClickHandler}
-        style={{
-          font: "inherit",
-          cursor: "pointer",
-          border: "1px, solid blue",
-          background: "blue",
-          color: "white",
-          padding: "1 rem 2 rem",
-        }}
+    <Container>
+      <Header
+        textAlign="center"
+        as="h1"
+        color="orange"
+        size="huge"
+        data-cy="title"
+        id="title"
       >
-        Get started
+        Welcome to the Rock Paper Scissor game!
+      </Header>
+      <Button color="black" animated id="srt-btn" onClick={onClickHandler}>
+        <Button.Content visible>Get started</Button.Content>
+        <Button.Content hidden>
+          <Icon name="play"></Icon>
+        </Button.Content>
       </Button>
-    </div>
+      <Image
+        id="header-image"
+        src="https://www.rd.com/wp-content/uploads/2016/04/rock-paper-scissor-ft.jpg"
+        rounded
+      ></Image>
+    </Container>
   );
 };
 
-export default Header;
+export default Title;

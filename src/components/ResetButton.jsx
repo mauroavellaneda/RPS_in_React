@@ -5,7 +5,7 @@ const ResetButton = (props) => {
   return (
     <div>
       <Button id="rst-btn" data-cy="rst-btn" onClick={props.onClick()}>
-        Reset scoreboard
+        Reset Scoreboard
       </Button>
     </div>
   );

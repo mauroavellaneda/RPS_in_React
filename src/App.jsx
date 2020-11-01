@@ -82,7 +82,7 @@ class App extends Component {
             />
 
             <p>
-              <strong>Your time to move!</strong> <br />
+              <strong></strong> <br />
             </p>
 
             <h2 data-cy="score-message">{this.state.winner}</h2>
